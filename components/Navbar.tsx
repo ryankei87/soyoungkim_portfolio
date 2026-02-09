@@ -14,27 +14,29 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#111111]/80 backdrop-blur-xl border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         <button 
           onClick={() => setCurrentPage('works')}
-          className="text-2xl font-extrabold tracking-tighter text-black hover:opacity-70 transition-opacity"
+          className="text-3xl font-black tracking-tighter text-white hover:text-pink-500 transition-colors uppercase"
         >
           SOYOUNG<span className="text-pink-500">.</span>
         </button>
         
-        <div className="flex gap-8">
+        <div className="flex gap-10">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => setCurrentPage(item.id)}
-              className={`text-sm font-semibold tracking-wide transition-all duration-300 relative py-1 ${
-                currentPage === item.id ? 'text-black' : 'text-gray-400 hover:text-black'
+              className={`text-xs font-black tracking-[0.2em] uppercase transition-all duration-300 relative py-1 ${
+                currentPage === item.id || (currentPage === 'project-detail' && item.id === 'works') 
+                  ? 'text-white' 
+                  : 'text-white/30 hover:text-white'
               }`}
             >
               {item.name}
-              {currentPage === item.id && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-pink-500 rounded-full" />
+              {(currentPage === item.id || (currentPage === 'project-detail' && item.id === 'works')) && (
+                <span className="absolute -bottom-1 left-0 w-full h-1 bg-pink-500 rounded-full" />
               )}
             </button>
           ))}
