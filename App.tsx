@@ -45,7 +45,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#111111] text-white selection:bg-pink-500 selection:text-white">
+    <div className="min-h-screen bg-white text-black selection:bg-black selection:text-white">
       <Navbar currentPage={currentPage} setCurrentPage={(p) => {
         setCurrentPage(p);
         setSelectedProject(null);
@@ -58,29 +58,38 @@ const App: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
           >
             {renderPage()}
           </motion.div>
         </AnimatePresence>
       </main>
 
-      {/* Persistent PDF-style Timeline Footer */}
-      <footer className="bg-[#111111] py-16 px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center text-white/20 font-black italic select-none mb-12">
-            <span className="text-2xl md:text-5xl px-6 py-2 border border-white/10 rounded-full">2016</span>
-            <div className="flex-1 h-[1px] bg-white/5 mx-8"></div>
-            <span className="text-2xl md:text-5xl px-6 py-2 border border-white/10 rounded-full">2024</span>
-          </div>
-          
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold uppercase tracking-widest text-white/40">
-            <p>© SOYOUNG KIM BX DESIGNER PORTFOLIO</p>
-            <div className="flex gap-8">
-              <a href="#" className="hover:text-pink-500 transition-colors">Instagram</a>
-              <a href="#" className="hover:text-pink-500 transition-colors">Behance</a>
-              <a href="mailto:okhime3@gmail.com" className="hover:text-pink-500 transition-colors">Email</a>
+      <footer className="bg-white py-20 px-6 lg:px-12 border-t border-black/5">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+            <div className="lg:col-span-2">
+              <h3 className="text-4xl font-black uppercase tracking-tighter mb-6">SOYOUNG KIM.</h3>
+              <p className="text-xl font-medium text-black/60 max-w-sm">
+                Independent BX Designer creating identities with clarity and emotion.
+              </p>
             </div>
+            <div>
+              <h4 className="text-xs font-black uppercase tracking-widest text-black/30 mb-6">Connect</h4>
+              <div className="flex flex-col gap-3 font-bold">
+                <a href="#" className="hover:underline underline-offset-4">Behance</a>
+                <a href="#" className="hover:underline underline-offset-4">Instagram</a>
+                <a href="#" className="hover:underline underline-offset-4">LinkedIn</a>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-xs font-black uppercase tracking-widest text-black/30 mb-6">Contact</h4>
+              <a href="mailto:okhime3@gmail.com" className="font-bold hover:underline underline-offset-4">okhime3@gmail.com</a>
+            </div>
+          </div>
+          <div className="pt-12 border-t border-black/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-black/30">
+            <span>© 2024 SOYOUNG KIM</span>
+            <span>SEOUL / GLOBAL</span>
           </div>
         </div>
       </footer>

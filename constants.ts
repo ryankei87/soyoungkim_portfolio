@@ -11,12 +11,12 @@ export const PROJECTS: Project[] = [
     contribution: 'Seasonal Concept Branding, Applications, Package & Product, VMD, ISP, Web & Mobile, Campaign Video, Promotion, SNS, Guidelines',
     description: 'A "Creative Color Play" cosmetic brand for the 2030 target demographic.',
     conceptText: 'STONEBRICK is a cosmetic brand where you can enjoy finding and combining new colors. Featuring magnetic products that assemble like Lego bricks, the "BUILD YOUR COLORS" slogan drives a pop and playful brand visual.',
-    image: 'https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=1200', // Updated to a high-quality product shot matching the colorful block aesthetic
+    image: 'https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?q=80&w=1200',
     color: '#FF008A',
     tags: ['Cosmetics', 'Build Your Colors', 'Pop'],
     secondaryImages: [
       'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000',
-      'https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?q=80&w=1000'
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000'
     ]
   },
   {

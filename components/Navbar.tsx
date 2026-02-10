@@ -14,11 +14,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#111111]/80 backdrop-blur-xl border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-black/5">
+      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
         <button 
           onClick={() => setCurrentPage('works')}
-          className="text-3xl font-black tracking-tighter text-white hover:text-pink-500 transition-colors uppercase"
+          className="text-2xl font-black tracking-tighter text-black uppercase"
         >
           SOYOUNG<span className="text-pink-500">.</span>
         </button>
@@ -28,15 +28,15 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
             <button
               key={item.id}
               onClick={() => setCurrentPage(item.id)}
-              className={`text-xs font-black tracking-[0.2em] uppercase transition-all duration-300 relative py-1 ${
+              className={`text-[11px] font-black tracking-[0.2em] uppercase transition-all duration-300 relative py-1 ${
                 currentPage === item.id || (currentPage === 'project-detail' && item.id === 'works') 
-                  ? 'text-white' 
-                  : 'text-white/30 hover:text-white'
+                  ? 'text-black' 
+                  : 'text-black/30 hover:text-black'
               }`}
             >
               {item.name}
               {(currentPage === item.id || (currentPage === 'project-detail' && item.id === 'works')) && (
-                <span className="absolute -bottom-1 left-0 w-full h-1 bg-pink-500 rounded-full" />
+                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-black rounded-full" />
               )}
             </button>
           ))}
